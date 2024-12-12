@@ -1,0 +1,458 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+
+    <!--// Minimize Button Style \\-->
+    <Style x:Key="MinimizeStyle" TargetType="{x:Type Button}">
+
+        <Setter Property="Height" Value="40"/>
+        <Setter Property="Width" Value="40"/>
+        <Setter Property="Background" Value="Transparent"/>
+        <Setter Property="BorderThickness" Value="0"/>
+        <Setter Property="Content" Value="–"/>
+        <Setter Property="FontSize" Value="20"/>
+        <Setter Property="FontWeight" Value="SemiBold"/>
+        <Setter Property="Foreground" Value="#121517"/>
+        <Setter Property="HorizontalAlignment" Value="Center"/>
+        <Setter Property="VerticalAlignment" Value="Center"/>
+        <Setter Property="Margin" Value="0,0,3,2.5"/>
+        <Setter Property="FocusVisualStyle" Value="{x:Null}"/>
+
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="{x:Type Button}">
+
+                    <Border
+                        CornerRadius="5"
+                        Background="{TemplateBinding Background}"
+                        BorderThickness="{TemplateBinding BorderThickness}">
+
+                        <ContentPresenter
+                            HorizontalAlignment="{TemplateBinding HorizontalAlignment}"
+                            VerticalAlignment="{TemplateBinding VerticalAlignment}"/>
+
+                    </Border>
+
+                    <ControlTemplate.Triggers>
+                        <Trigger Property="IsMouseOver" Value="True">
+                            <Setter Property="Background" Value="Gray"/>
+                        </Trigger>
+                    </ControlTemplate.Triggers>
+
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+
+    </Style>
+
+    <!--// Close Button Style \\-->
+    <Style x:Key="CloseStyle" TargetType="{x:Type Button}">
+
+        <Setter Property="Height" Value="40"/>
+        <Setter Property="Width" Value="40"/>
+        <Setter Property="Background" Value="Transparent"/>
+        <Setter Property="BorderThickness" Value="0"/>
+        <Setter Property="Content" Value="✕"/>
+        <Setter Property="FontSize" Value="20"/>
+        <Setter Property="FontWeight" Value="SemiBold"/>
+        <Setter Property="Foreground" Value="#121517"/>
+        <Setter Property="HorizontalAlignment" Value="Center"/>
+        <Setter Property="VerticalAlignment" Value="Center"/>
+        <Setter Property="Margin" Value="0,0,20,0"/>
+        <Setter Property="FocusVisualStyle" Value="{x:Null}"/>
+
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="{x:Type Button}">
+
+                    <Border
+                        CornerRadius="5"
+                        Background="{TemplateBinding Background}"
+                        BorderThickness="{TemplateBinding BorderThickness}">
+
+                        <ContentPresenter
+                            HorizontalAlignment="{TemplateBinding HorizontalAlignment}"
+                            VerticalAlignment="{TemplateBinding VerticalAlignment}"/>
+
+                    </Border>
+
+                    <ControlTemplate.Triggers>
+                        <Trigger Property="IsMouseOver" Value="True">
+                            <Setter Property="Background" Value="#e60000"/>
+                        </Trigger>
+                    </ControlTemplate.Triggers>
+
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+
+    </Style>
+
+    <!--// Add Button Style \\-->
+    <Style x:Key="AddStyle" TargetType="{x:Type Button}">
+
+        <Setter Property="Height" Value="30"/>
+        <Setter Property="Width" Value="50"/>
+        <Setter Property="Background" Value="#512da8"/>
+        <Setter Property="BorderThickness" Value="1"/>
+        <Setter Property="BorderBrush" Value="#4a148c"/>
+        <Setter Property="VerticalAlignment" Value="Center"/>
+        <Setter Property="FocusVisualStyle" Value="{x:Null}"/>
+
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="{x:Type Button}">
+
+                    <Border
+                        CornerRadius="5"
+                        Background="{TemplateBinding Background}"
+                        BorderThickness="{TemplateBinding BorderThickness}"
+                        BorderBrush="{TemplateBinding BorderBrush}"
+                        Padding="5">
+
+                        <ContentControl
+                            HorizontalAlignment="Center"
+                            VerticalAlignment="Center">
+
+                            <Image
+                                Source="/Images/Add.png"
+                                RenderOptions.BitmapScalingMode="Fant"/>
+
+                        </ContentControl>
+
+                    </Border>
+
+                    <ControlTemplate.Triggers>
+                        <Trigger Property="IsMouseOver" Value="True">
+                            <Setter Property="Background" Value="#673ab7"/>
+                        </Trigger>
+                    </ControlTemplate.Triggers>
+
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+
+    </Style>
+
+    <!--// Tab Buttons Style \\-->
+    <Style x:Key="TabStyle" TargetType="{x:Type Button}">
+
+        <Setter Property="Height" Value="30"/>
+        <Setter Property="Width" Value="70"/>
+        <Setter Property="Background" Value="Transparent"/>
+        <Setter Property="BorderThickness" Value="0,0,0,1"/>
+        <Setter Property="BorderBrush" Value="Transparent"/>
+        <Setter Property="FontSize" Value="14"/>
+        <Setter Property="FontWeight" Value="SemiBold"/>
+        <Setter Property="Foreground" Value="#121518"/>
+        <Setter Property="Margin" Value="20,0,0,0"/>
+        <Setter Property="FocusVisualStyle" Value="{x:Null}"/>
+
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="{x:Type Button}">
+
+                    <Border
+                        Background="{TemplateBinding Background}"
+                        BorderThickness="{TemplateBinding BorderThickness}"
+                        BorderBrush="{TemplateBinding BorderBrush}">
+
+                        <ContentPresenter
+                            HorizontalAlignment="Center"
+                            VerticalAlignment="Center"/>
+
+                    </Border>
+
+                    <ControlTemplate.Triggers>
+
+                        <Trigger Property="IsMouseOver" Value="True">
+                            <Setter Property="BorderBrush" Value="#784ff2"/>
+                        </Trigger>
+
+                        <Trigger Property="IsFocused" Value="True">
+                            <Setter Property="BorderBrush" Value="#784ff2"/>
+                        </Trigger>
+
+                    </ControlTemplate.Triggers>
+
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+
+    </Style>
+
+    <!--// Edit Button Style \\-->
+    <Style x:Key="EditButtonStyle" TargetType="{x:Type Button}">
+
+        <Setter Property="Height" Value="30"/>
+        <Setter Property="Width" Value="50"/>
+        <Setter Property="Background" Value="#512da8"/>
+        <Setter Property="BorderThickness" Value="1"/>
+        <Setter Property="BorderBrush" Value="#4a148c"/>
+        <Setter Property="VerticalAlignment" Value="Center"/>
+        <Setter Property="FocusVisualStyle" Value="{x:Null}"/>
+
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="{x:Type Button}">
+
+                    <Border
+                        CornerRadius="5"
+                        Background="{TemplateBinding Background}"
+                        BorderThickness="{TemplateBinding BorderThickness}"
+                        BorderBrush="{TemplateBinding BorderBrush}"
+                        Padding="5">
+
+                        <ContentControl
+                            HorizontalAlignment="Center"
+                            VerticalAlignment="Center">
+
+                            <Image
+                                Source="/Images/Edit.png"
+                                RenderOptions.BitmapScalingMode="Fant"/>
+
+                        </ContentControl>
+
+                    </Border>
+
+                    <ControlTemplate.Triggers>
+                        <Trigger Property="IsMouseOver" Value="True">
+                            <Setter Property="Background" Value="#673ab7"/>
+                        </Trigger>
+                    </ControlTemplate.Triggers>
+
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+
+    </Style>
+
+    <!--// Remove Button Style \\-->
+    <Style x:Key="RemoveButtonStyle" TargetType="{x:Type Button}">
+
+        <Setter Property="Height" Value="30"/>
+        <Setter Property="Width" Value="50"/>
+        <Setter Property="Background" Value="#d32f2f"/>
+        <Setter Property="BorderBrush" Value="#b71c1c"/>
+        <Setter Property="VerticalAlignment" Value="Center"/>
+        <Setter Property="FocusVisualStyle" Value="{x:Null}"/>
+
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="{x:Type Button}">
+
+                    <Border
+                        CornerRadius="5"
+                        Background="{TemplateBinding Background}"
+                        BorderThickness="{TemplateBinding BorderThickness}"
+                        BorderBrush="{TemplateBinding BorderBrush}"
+                        Padding="5">
+
+                        <ContentControl
+                            HorizontalAlignment="Center"
+                            VerticalAlignment="Center">
+
+                            <Image
+                                Source="/Images/Remove.png"
+                                RenderOptions.BitmapScalingMode="Fant"/>
+
+                        </ContentControl>
+
+                    </Border>
+
+                    <ControlTemplate.Triggers>
+                        <Trigger Property="IsMouseOver" Value="True">
+                            <Setter Property="Background" Value="#f44336"/>
+                        </Trigger>
+                    </ControlTemplate.Triggers>
+
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+
+    </Style>
+
+    <!--// Back Button Style \\-->
+    <Style x:Key="BackButtonStyle" TargetType="{x:Type Button}">
+
+        <Setter Property="Height" Value="40"/>
+        <Setter Property="Width" Value="40"/>
+        <Setter Property="Background" Value="#512da8"/>
+        <Setter Property="BorderThickness" Value="1"/>
+        <Setter Property="Background" Value="#6741d9"/>
+        <Setter Property="VerticalAlignment" Value="Center"/>
+        <Setter Property="Margin" Value="0,0,10,0"/>
+        <Setter Property="FocusVisualStyle" Value="{x:Null}"/>
+
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="{x:Type Button}">
+
+                    <Border
+                        CornerRadius="5"
+                        Background="{TemplateBinding Background}"
+                        BorderThickness="{TemplateBinding BorderThickness}"
+                        Padding="5">
+
+                        <ContentControl
+                            HorizontalAlignment="Center"
+                            VerticalAlignment="Center">
+
+                            <Image
+                                Source="/Images/Back.png"
+                                RenderOptions.BitmapScalingMode="Fant"/>
+
+                        </ContentControl>
+
+                    </Border>
+
+                    <ControlTemplate.Triggers>
+                        <Trigger Property="IsMouseOver" Value="True">
+                            <Setter Property="Background" Value="#7b5cd6"/>
+                        </Trigger>
+                    </ControlTemplate.Triggers>
+
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+
+    </Style>
+
+    <!--// Save Button Style \\-->
+    <Style x:Key="SaveButtonStyle" TargetType="{x:Type Button}">
+
+        <Setter Property="Height" Value="30"/>
+        <Setter Property="Width" Value="50"/>
+        <Setter Property="Background" Value="#512da8"/>
+        <Setter Property="BorderThickness" Value="1"/>
+        <Setter Property="BorderBrush" Value="#4a148c"/>
+        <Setter Property="VerticalAlignment" Value="Center"/>
+        <Setter Property="FocusVisualStyle" Value="{x:Null}"/>
+
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="{x:Type Button}">
+
+                    <Border
+                        CornerRadius="5"
+                        Background="{TemplateBinding Background}"
+                        BorderThickness="{TemplateBinding BorderThickness}"
+                        BorderBrush="{TemplateBinding BorderBrush}"
+                        Padding="5">
+
+                        <ContentControl
+                            HorizontalAlignment="Center"
+                            VerticalAlignment="Center">
+
+                            <Image
+                                Source="/Images/Save.png"
+                                RenderOptions.BitmapScalingMode="Fant"/>
+
+                        </ContentControl>
+
+                    </Border>
+
+                    <ControlTemplate.Triggers>
+                        <Trigger Property="IsMouseOver" Value="True">
+                            <Setter Property="Background" Value="#673ab7"/>
+                        </Trigger>
+                    </ControlTemplate.Triggers>
+
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+
+    </Style>
+
+    <!--// Migration Button Style \\-->
+    <Style x:Key="MigrationButtonStyle" TargetType="{x:Type Button}">
+
+        <Setter Property="Height" Value="40"/>
+        <Setter Property="Width" Value="40"/>
+        <Setter Property="Background" Value="#512da8"/>
+        <Setter Property="BorderThickness" Value="1"/>
+        <Setter Property="Background" Value="#6741d9"/>
+        <Setter Property="VerticalAlignment" Value="Center"/>
+        <Setter Property="Margin" Value="0,0,10,0"/>
+        <Setter Property="FocusVisualStyle" Value="{x:Null}"/>
+
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="{x:Type Button}">
+
+                    <Border
+                        CornerRadius="5"
+                        Background="{TemplateBinding Background}"
+                        BorderThickness="{TemplateBinding BorderThickness}"
+                        Padding="5">
+
+                        <ContentControl
+                            HorizontalAlignment="Center"
+                            VerticalAlignment="Center">
+
+                            <Image
+                                Source="/Images/Create.png"
+                                RenderOptions.BitmapScalingMode="Fant"/>
+
+                        </ContentControl>
+
+                    </Border>
+
+                    <ControlTemplate.Triggers>
+                        <Trigger Property="IsMouseOver" Value="True">
+                            <Setter Property="Background" Value="#7b5cd6"/>
+                        </Trigger>
+                    </ControlTemplate.Triggers>
+
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+
+    </Style>
+
+    <!--// Remove Migration Button Style \\-->
+    <Style x:Key="RemoveMigrationButtonStyle" TargetType="{x:Type Button}">
+
+        <Setter Property="Height" Value="40"/>
+        <Setter Property="Width" Value="40"/>
+        <Setter Property="Background" Value="#512da8"/>
+        <Setter Property="BorderThickness" Value="1"/>
+        <Setter Property="Background" Value="#6741d9"/>
+        <Setter Property="VerticalAlignment" Value="Center"/>
+        <Setter Property="Margin" Value="0,0,10,0"/>
+        <Setter Property="FocusVisualStyle" Value="{x:Null}"/>
+
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="{x:Type Button}">
+
+                    <Border
+                        CornerRadius="5"
+                        Background="{TemplateBinding Background}"
+                        BorderThickness="{TemplateBinding BorderThickness}"
+                        Padding="5">
+
+                        <ContentControl
+                            HorizontalAlignment="Center"
+                            VerticalAlignment="Center">
+
+                            <Image
+                                Source="/Images/Remove.png"
+                                RenderOptions.BitmapScalingMode="Fant"/>
+
+                        </ContentControl>
+
+                    </Border>
+
+                    <ControlTemplate.Triggers>
+                        <Trigger Property="IsMouseOver" Value="True">
+                            <Setter Property="Background" Value="#7b5cd6"/>
+                        </Trigger>
+                    </ControlTemplate.Triggers>
+
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+
+    </Style>
+
+</ResourceDictionary>
